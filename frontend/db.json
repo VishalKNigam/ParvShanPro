@@ -1,0 +1,85 @@
+{
+  "products": [
+    {
+      "id": 2,
+      "image": "https://placehold.co/600x400/EEE/31343C",
+      "name": "Jeans",
+      "price": 2500,
+      "brand": "Levi's",
+      "category": "bottom-wears",
+      "gender": "male"
+    },
+    {
+      "id": 3,
+      "image": "https://placehold.co/600x400/EEE/31343C",
+      "name": "Dress",
+      "price": 4500,
+      "brand": "H&M",
+      "category": "dresses",
+      "gender": "female"
+    },
+    {
+      "id": 4,
+      "image": "https://placehold.co/600x400/EEE/31343C",
+      "name": "Sneakers",
+      "price": 1500,
+      "brand": "Nike",
+      "category": "shoes",
+      "gender": "unisex"
+    },
+    {
+      "id": 5,
+      "image": "https://placehold.co/600x400/EEE/31343C",
+      "name": "Hoodie",
+      "price": 2800,
+      "brand": "Adidas",
+      "category": "top-wears",
+      "gender": "male"
+    },
+    {
+      "id": 6,
+      "image": "https://placehold.co/600x400/EEE/31343C",
+      "name": "Skirt",
+      "price": 2200,
+      "brand": "Zara",
+      "category": "bottom-wears",
+      "gender": "female"
+    },
+    {
+      "id": 7,
+      "image": "https://placehold.co/600x400/EEE/31343C",
+      "name": "Backpack",
+      "price": 1800,
+      "brand": "North Face",
+      "category": "accessories",
+      "gender": "unisex"
+    },
+    {
+      "id": 8,
+      "image": "https://placehold.co/600x400/EEE/31343C",
+      "name": "T-shirt",
+      "price": 1200,
+      "brand": "Gap",
+      "category": "top-wears",
+      "gender": "male"
+    },
+    {
+      "id": 9,
+      "image": "https://placehold.co/600x400/EEE/31343C",
+      "name": "Sweater",
+      "price": 3200,
+      "brand": "H&M",
+      "category": "top-wears",
+      "gender": "female"
+    },
+    {
+      "id": 10,
+      "image": "https://placehold.co/600x400/EEE/31343C",
+      "name": "Socks",
+      "price": 500,
+      "brand": "Nike",
+      "category": "accessories",
+      "gender": "unisex"
+    }
+  ]
+}
