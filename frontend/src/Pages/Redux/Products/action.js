@@ -11,9 +11,20 @@ export const addProduct = (newProduct)=> (dispatch) =>{
         dispatch({type: PRODUCT_FAILURE});
     })
 }
-export const getProduct = ()=>(dispatch)=>{
+export const getProduct = (paramsObj)=>(dispatch)=>{
     dispatch({type: PRODUCT_REQUEST});
-    axios.get(`http://localhost:8080/products`)
+    axios.get(`http://localhost:8080/products`, paramsObj)
+    .then((res)=>{
+        dispatch({type: GET_PRODUCT_SUCCESS, payload: res.data});
+    })
+    .catch((err)=>{
+        dispatch({type: PRODUCT_FAILURE});
+    })
+    
+}
+export const EditProduct = (paramsObj)=>(dispatch)=>{
+    dispatch({type: PRODUCT_REQUEST});
+    axios.get(`http://localhost:8080/products`, paramsObj)
     .then((res)=>{
         dispatch({type: GET_PRODUCT_SUCCESS, payload: res.data});
     })

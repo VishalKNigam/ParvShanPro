@@ -4,7 +4,7 @@
       "id": 2,
       "image": "https://placehold.co/600x400/EEE/31343C",
       "name": "Jeans",
-      "price": 2500,
+      "price": 500,
       "brand": "Levi's",
       "category": "bottom-wears",
       "gender": "male"
@@ -13,9 +13,9 @@
       "id": 3,
       "image": "https://placehold.co/600x400/EEE/31343C",
       "name": "Dress",
-      "price": 4500,
+      "price": 500,
       "brand": "H&M",
-      "category": "dresses",
+      "category": "bottom-wears",
       "gender": "female"
     },
     {
@@ -24,7 +24,7 @@
       "name": "Sneakers",
       "price": 1500,
       "brand": "Nike",
-      "category": "shoes",
+      "category": "foot-wears",
       "gender": "unisex"
     },
     {
@@ -51,7 +51,7 @@
       "name": "Backpack",
       "price": 1800,
       "brand": "North Face",
-      "category": "accessories",
+      "category": "foot-wears",
       "gender": "unisex"
     },
     {
@@ -78,7 +78,7 @@
       "name": "Socks",
       "price": 500,
       "brand": "Nike",
-      "category": "accessories",
+      "category": "foot-wears",
       "gender": "unisex"
     }
   ]

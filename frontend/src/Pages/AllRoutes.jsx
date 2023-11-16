@@ -3,7 +3,7 @@ import { Admin } from "./Admin";
 import { Login } from "./Login";
 import { HomePage } from "./HomePage";
 import { SingleProduct } from "./SingleProduct";
-import { EditProduct } from "./EditProduct";
+import  EditProduct  from "./EditProduct";
 import { PrivateRoutes } from "../Components/PrivateRoutes";
 export const AllRoutes = () => {
   return (

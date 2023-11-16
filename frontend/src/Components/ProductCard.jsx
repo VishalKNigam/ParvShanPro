@@ -24,9 +24,12 @@ export const ProductCard = ({
       <p>Brand:-{brand}</p>
       <p>Category:-{category}</p>
       <p>Gender:-{gender}</p>
-      {isAuth && (<button>
+      {/* {isAuth && (<button>
         <Link to={`/edit/${id}`}>Edit</Link>
-      </button>)}
+      </button>)} */}
+       <button>
+        <Link to={`/edit/${id}`}>Edit</Link>
+      </button>
     </CardWrapper>
   );
 };
