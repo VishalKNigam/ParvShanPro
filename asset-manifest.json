@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/https://ParvShanPro/static/css/main.d3048bbb.css",
+    "main.js": "/https://ParvShanPro/static/js/main.e874d2d4.js",
+    "static/js/787.12cf3cec.chunk.js": "/https://ParvShanPro/static/js/787.12cf3cec.chunk.js",
+    "index.html": "/https://ParvShanPro/index.html",
+    "main.d3048bbb.css.map": "/https://ParvShanPro/static/css/main.d3048bbb.css.map",
+    "main.e874d2d4.js.map": "/https://ParvShanPro/static/js/main.e874d2d4.js.map",
+    "787.12cf3cec.chunk.js.map": "/https://ParvShanPro/static/js/787.12cf3cec.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d3048bbb.css",
+    "static/js/main.e874d2d4.js"
+  ]
+}
