@@ -1,9 +1,10 @@
 import axios from "axios";
-import { GET_PRODUCT_SUCCESS, POST_PRODUCT_SUCCESS, PRODUCT_FAILURE, PRODUCT_REQUEST } from "./actionTypes"
+import { GET_PRODUCT_SUCCESS, PATCH_PRODUCT_SUCCESS,
+     POST_PRODUCT_SUCCESS, PRODUCT_FAILURE, PRODUCT_REQUEST } from "./actionTypes"
 
 export const addProduct = (newProduct)=> (dispatch) =>{
     dispatch({type: PRODUCT_REQUEST});
-    axios.post(`http://localhost:8080/products`, newProduct)
+    axios.post(`https://parvshanpro.onrender.com/products`, newProduct)
     .then((res)=>{
         dispatch({type: POST_PRODUCT_SUCCESS});
     })
@@ -13,7 +14,7 @@ export const addProduct = (newProduct)=> (dispatch) =>{
 }
 export const getProduct = (paramsObj)=>(dispatch)=>{
     dispatch({type: PRODUCT_REQUEST});
-    axios.get(`http://localhost:8080/products`, paramsObj)
+    axios.get(`https://parvshanpro.onrender.com/products`, paramsObj)
     .then((res)=>{
         dispatch({type: GET_PRODUCT_SUCCESS, payload: res.data});
     })
@@ -22,11 +23,11 @@ export const getProduct = (paramsObj)=>(dispatch)=>{
     })
     
 }
-export const EditProduct = (paramsObj)=>(dispatch)=>{
+export const editProduct = (id,data)=>(dispatch)=>{
     dispatch({type: PRODUCT_REQUEST});
-    axios.get(`http://localhost:8080/products`, paramsObj)
+    axios.patch(`https://parvshanpro.onrender.com/products/${id}`, data)
     .then((res)=>{
-        dispatch({type: GET_PRODUCT_SUCCESS, payload: res.data});
+        dispatch({type: PATCH_PRODUCT_SUCCESS});
     })
     .catch((err)=>{
         dispatch({type: PRODUCT_FAILURE});

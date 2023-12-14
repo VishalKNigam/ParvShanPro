@@ -1,29 +1,37 @@
-import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import { editProduct } from './Redux/Products/action';
 
 const EditProduct = () => {
   const [data, setData] = useState({});
-  const [name, setName] = useState();
-  const [price, setPrice] = useState();
+  const [name, setName] = useState("");
+  const [price, setPrice] = useState(0);
   const {id} = useParams();
   const products = useSelector(store=> store.productReducer.products);
   // console.log(products)
+  const dispatch = useDispatch();
   useEffect(()=>{
-    const product = products.find((e)=> e.id === +id);
-    console.log(product)
-    setData(product)
-  })
+    const {price, name} = products.find((e)=> e.id === +id);
+    setName(name);
+    setPrice(price);
+    // console.log(product)
+    // setData(product)
+  },[])
   const handleEdit = ()=>{
+   
     const newObj = {
-      name,
-      price
+      name: name,
+      price: Number(price)
     }
+    // console.log(newObj)
+    dispatch(editProduct(id, newObj));
   }
   return (
     <div>
-      <input type="text" name="" id="" value={name} onChange={(e)=> setName(e.target.value)}/>
-      <input type="number" name="" id="" value={price} onChange={(e)=> setPrice(e.target.value)}/>
+      <h3>{id}</h3>
+      <input type="text" name="" id="" value={name} onChange={(e)=> setName(e.target.value)} placeholder='name'/>
+      <input type="number" name="" id="" value={price} onChange={(e)=> setPrice(e.target.value)} placeholder='price'/>
       <input type="submit" value="Submit" onClick={handleEdit}/>
     </div>
   )

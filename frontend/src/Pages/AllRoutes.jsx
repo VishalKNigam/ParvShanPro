@@ -3,7 +3,7 @@ import { Admin } from "./Admin";
 import { Login } from "./Login";
 import { HomePage } from "./HomePage";
 import { SingleProduct } from "./SingleProduct";
-import  EditProduct  from "./EditProduct";
+import EditProduct from "./EditProduct";
 import { PrivateRoutes } from "../Components/PrivateRoutes";
 export const AllRoutes = () => {
   return (
@@ -13,25 +13,25 @@ export const AllRoutes = () => {
       <Route
         path="/admin"
         element={
-          
+          <PrivateRoutes>
             <Admin />
-          
+          </PrivateRoutes>
         }
       />
       <Route
         path="/view/:id"
         element={
-          
+          <PrivateRoutes>
             <SingleProduct />
-          
+          </PrivateRoutes>
         }
       />
       <Route
         path="/edit/:id"
         element={
-         
+          <PrivateRoutes>
             <EditProduct />
-          
+          </PrivateRoutes>
         }
       />
       <Route path="/login" element={<Login />} />

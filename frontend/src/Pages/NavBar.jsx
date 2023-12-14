@@ -1,19 +1,18 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import React from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 export const NavBar = () => {
   return (
     <NavWrapper>
       <Link to={"/"}>
-        <img src="./ProjectLogo.png" alt="Project Logo" />
+        <h1>Parv-Shan</h1>
       </Link>
       <Link to={"/login"}>
         <h2>Login</h2>
       </Link>
       <Link to={"/admin"}>
-        
-      <h2>Admin</h2>
+        <h2>Admin</h2>
       </Link>
     </NavWrapper>
   );
@@ -55,7 +54,7 @@ const NavWrapper = styled.div`
     a {
       margin-top: 10px;
     }
-    h2{
+    h2 {
       font-size: smaller;
     }
   }

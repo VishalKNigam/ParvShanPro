@@ -6,12 +6,12 @@ import { useDispatch } from "react-redux";
 const width = 50; // The width of the rectangle
 const goldenRatio = 1.6180339887; // The golden ratio
 const initialState = {
+  image: "",
   name: "",
-  email: "",
-  brand: "",
   price: 0,
-  gender: "",
+  brand: "",
   category: "",
+  gender: "",
 };
 export const Admin = () => {
   const [data, setData] = useState(initialState);
@@ -46,48 +46,53 @@ export const Admin = () => {
   return (
     <DIV>
       <form action="" onSubmit={handleSubmit}>
+      <input
+          type="text"
+          placeholder="Image"
+          name="image"
+          onChange={handleChange}
+          required
+        />
         <input
           type="text"
           placeholder="Name"
           name="name"
           onChange={handleChange}
-        />
-        <input
-          type="text"
-          placeholder="Email"
-          name="email"
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          placeholder="Brand"
-          name="brand"
-          onChange={handleChange}
+          required
         />
         <input
           type="number"
           placeholder="Price"
           name="price"
           onChange={handleChange}
+          required
         />
-        <select name="gender" onChange={handleChange}>
+        <input
+          type="text"
+          placeholder="Brand"
+          name="brand"
+          onChange={handleChange}
+          required
+        />
+        <select name="category" onChange={handleChange} required>
+          <option value="">Select Category</option>
+
+          <option value="top-wears">Top Wears</option>
+
+          <option value="bottom-wears">Bottom Wears</option>
+
+          <option value="foot-wears">Foot Wears</option>
+        </select>
+        <select name="gender" onChange={handleChange} required>
           <option value="">Select</option>
 
           <option value="male">Male</option>
 
           <option value="female">Female</option>
 
-          <option value="kids">Kids</option>
+          <option value="unisex">Unisex</option>
         </select>
-        <select name="category" onChange={handleChange}>
-          <option value="">Select Category</option>
-
-          <option value="top-wear">Top Wears</option>
-
-          <option value="bottom-wear">Bottom Wears</option>
-
-          <option value="foot-wear">Foot Wears</option>
-        </select>
+        
         <button type="submit">Submit</button>
       </form>
     </DIV>

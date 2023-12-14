@@ -1,4 +1,4 @@
-import {LOGIN_REQUEST, LOGIN_FAILURE, LOGIN_SUCCESS} from "./actionTypes";
+import {LOGIN_REQUEST, LOGIN_FAILURE, LOGIN_SUCCESS,LogoutUpdate} from "./actionTypes";
 import axios from "axios";
 export const login = (loginData)=>(dispatch)=>{
     dispatch({type: LOGIN_REQUEST});
@@ -11,3 +11,10 @@ export const login = (loginData)=>(dispatch)=>{
 
     })
 } 
+export const logoutFunction=(dispatch)=>{
+    axios.get('').then((response)=>{
+      dispatch({type:LogoutUpdate})
+    }).catch((error)=>{
+      console.log(error)
+    })
+  }

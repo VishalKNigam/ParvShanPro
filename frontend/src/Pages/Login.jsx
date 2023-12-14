@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { login } from "./Redux/Authentication/action";
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
@@ -9,9 +9,10 @@ const goldenRatio = 1.6180339887; // The golden ratio
 export const Login = () => {
   const [email, setEmail] = useState("eve.holt@reqres.in");
   const [password, setPassword] = useState("");
-  const location = useLocation();
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  console.log(navigate);
+  const location = useLocation();
   const { isAuth, isError, errorMessage } = useSelector((store) => {
     return {
       isAuth: store.authReducer.isAuth,
@@ -26,10 +27,14 @@ export const Login = () => {
       password,
     };
     dispatch(login(details))
-  // .then(() => {
-  //   navigate(location.state, { replace: true });
-  // });
-  };
+    
+  }
+  useEffect(()=>{
+    if(isAuth){
+      navigate(location.state, {replace: true})
+      // navigate(-1)-- less controlled way
+    }
+  },[isAuth, navigate])
   return (
     <DIV auth={isAuth} err={isError}>
       <h1>{isAuth ? "Login Successful" : "Please Login"}</h1>

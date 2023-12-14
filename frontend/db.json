@@ -1,18 +1,27 @@
 {
   "products": [
     {
+      "id": 1,
+      "image": "https://images.pexels.com/photos/19357725/pexels-photo-19357725/free-photo-of-man-wearing-black-outfit-and-white-sneakers.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "name": "New Sneakers",
+      "price": 12345511,
+      "brand": "Levi's",
+      "category": "foot-wears",
+      "gender": "male"
+    },
+    {
       "id": 2,
-      "image": "https://placehold.co/600x400/EEE/31343C",
-      "name": "Jeans",
+      "image": "https://images.pexels.com/photos/1153838/pexels-photo-1153838.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "name": "Casual Shoes",
       "price": 500,
       "brand": "Levi's",
-      "category": "bottom-wears",
+      "category": "foot-wears",
       "gender": "male"
     },
     {
       "id": 3,
-      "image": "https://placehold.co/600x400/EEE/31343C",
-      "name": "Dress",
+      "image": "https://images.pexels.com/photos/8609109/pexels-photo-8609109.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "name": "Stylish Kurta",
       "price": 500,
       "brand": "H&M",
       "category": "bottom-wears",
@@ -20,8 +29,8 @@
     },
     {
       "id": 4,
-      "image": "https://placehold.co/600x400/EEE/31343C",
-      "name": "Sneakers",
+      "image": "https://images.pexels.com/photos/8415116/pexels-photo-8415116.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "name": "Classic Unisex Sneakers",
       "price": 1500,
       "brand": "Nike",
       "category": "foot-wears",
@@ -29,8 +38,8 @@
     },
     {
       "id": 5,
-      "image": "https://placehold.co/600x400/EEE/31343C",
-      "name": "Hoodie",
+      "image": "https://images.pexels.com/photos/1656684/pexels-photo-1656684.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "name": "Comfort Fit Hoodie",
       "price": 2800,
       "brand": "Adidas",
       "category": "top-wears",
@@ -38,8 +47,8 @@
     },
     {
       "id": 6,
-      "image": "https://placehold.co/600x400/EEE/31343C",
-      "name": "Skirt",
+      "image": "https://images.pexels.com/photos/19399557/pexels-photo-19399557/free-photo-of-young-woman-in-a-trendy-autumnal-outfit-standing-by-the-tree.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "name": "Elegant Skirt",
       "price": 2200,
       "brand": "Zara",
       "category": "bottom-wears",
@@ -47,8 +56,8 @@
     },
     {
       "id": 7,
-      "image": "https://placehold.co/600x400/EEE/31343C",
-      "name": "Backpack",
+      "image": "https://images.pexels.com/photos/7698924/pexels-photo-7698924.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "name": "Versatile Backpack",
       "price": 1800,
       "brand": "North Face",
       "category": "foot-wears",
@@ -56,8 +65,8 @@
     },
     {
       "id": 8,
-      "image": "https://placehold.co/600x400/EEE/31343C",
-      "name": "T-shirt",
+      "image": "https://images.pexels.com/photos/4246061/pexels-photo-4246061.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "name": "Casual T-shirt",
       "price": 1200,
       "brand": "Gap",
       "category": "top-wears",
@@ -65,8 +74,8 @@
     },
     {
       "id": 9,
-      "image": "https://placehold.co/600x400/EEE/31343C",
-      "name": "Sweater",
+      "image": "https://images.pexels.com/photos/19308138/pexels-photo-19308138/free-photo-of-studio-shot-of-brunette-in-eyeglasses-and-checked-shirt.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "name": "Warm Sweater",
       "price": 3200,
       "brand": "H&M",
       "category": "top-wears",
@@ -74,11 +83,101 @@
     },
     {
       "id": 10,
-      "image": "https://placehold.co/600x400/EEE/31343C",
-      "name": "Socks",
+      "image": "https://images.pexels.com/photos/5325554/pexels-photo-5325554.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "name": "Comfortable Socks",
       "price": 500,
       "brand": "Nike",
       "category": "foot-wears",
+      "gender": "unisex"
+    },
+    {
+      "id": 11,
+      "image": "https://images.pexels.com/photos/5325556/pexels-photo-5325556.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "name": "Stylish Sandal",
+      "price": 20000,
+      "brand": "Gucci",
+      "category": "foot-wears",
+      "gender": "female"
+    },
+    {
+      "id": 12,
+      "image": "https://images.pexels.com/photos/19367154/pexels-photo-19367154/free-photo-of-man-wearing-denim-outfit-sitting-on-a-street.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "name": "Classic Denim Jeans",
+      "price": 1800,
+      "brand": "Calvin Klein",
+      "category": "bottom-wears",
+      "gender": "male"
+    },
+    {
+      "id": 13,
+      "image": "https://images.pexels.com/photos/19366877/pexels-photo-19366877/free-photo-of-handsome-model-in-black-t-shirt-sitting-on-wooden-chair-in-studio.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "name": "Casual Black T-shirt",
+      "price": 750,
+      "brand": "Tommy Hilfiger",
+      "category": "top-wears",
+      "gender": "male"
+    },
+    {
+      "id": 14,
+      "image": "https://images.pexels.com/photos/19399557/pexels-photo-19399557/free-photo-of-young-woman-in-a-trendy-autumnal-outfit-standing-by-the-tree.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "name": "Autumn Vibes Skirt",
+      "price": 2600,
+      "brand": "Forever 21",
+      "category": "bottom-wears",
+      "gender": "female"
+    },
+    {
+      "id": 15,
+      "image": "https://images.pexels.com/photos/5325556/pexels-photo-5325556.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "name": "Sporty Unisex Backpack",
+      "price": 1500,
+      "brand": "Under Armour",
+      "category": "foot-wears",
+      "gender": "unisex"
+    },
+    {
+      "id": 16,
+      "image": "https://images.pexels.com/photos/4246061/pexels-photo-4246061.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "name": "Striped Casual T-shirt",
+      "price": 1100,
+      "brand": "Old Navy",
+      "category": "top-wears",
+      "gender": "male"
+    },
+    {
+      "id": 17,
+      "image": "https://images.pexels.com/photos/7698924/pexels-photo-7698924.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "name": "Trendy Female Backpack",
+      "price": 2000,
+      "brand": "Fjällräven",
+      "category": "foot-wears",
+      "gender": "female"
+    },
+    {
+      "id": 18,
+      "image": "https://images.pexels.com/photos/19308156/pexels-photo-19308156/free-photo-of-model-in-checked-shirt-tossing-her-dreadlocks.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "name": "Checkered Fashion Sweater",
+      "price": 3500,
+      "brand": "Vero Moda",
+      "category": "top-wears",
+      "gender": "female"
+    },
+    {
+      "id": 19,
+      "image": "https://images.pexels.com/photos/5325554/pexels-photo-5325554.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "name": "Cozy Winter Socks",
+      "price": 650,
+      "brand": "Columbia",
+      "category": "foot-wears",
+      "gender": "unisex"
+    },
+    {
+      "id": 20,
+      "image": "https://images.pexels.com/photos/6787007/pexels-photo-6787007.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "name": "Vintage Unisex T-shirt",
+      "price": 1600,
+      "brand": "Ralph Lauren",
+      "category": "top-wears",
       "gender": "unisex"
     }
   ]
