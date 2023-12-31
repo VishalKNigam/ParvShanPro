@@ -8,4 +8,3 @@ export const PrivateRoutes = ({ children }) => {
   const isAuth = useSelector((store) => store.authReducer.isAuth);
   return isAuth ? children : <Navigate state={location} to={"/login"} replace={true}/>;
 };
-

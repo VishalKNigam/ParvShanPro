@@ -6,24 +6,50 @@ import styled from "styled-components";
 export const HomePage = () => {
   
   return (
-    <DIV>
+    <StyledHomePageContainer>
       <div className="sidebar">
         <SideBar />
       </div>
       <div className="product-list">
         <ProductList />
       </div>
-    </DIV>
+    </StyledHomePageContainer>
   );
 };
-const DIV = styled.div`
+const StyledHomePageContainer = styled.div`
   display: flex;
   flex-direction: row;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #333;
+  font-size: 16px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  justify-content: space-between;
+
   .sidebar{
-    width: 15%;
+    width: 25%;
+    background-color: #fff;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+
   }
+  .sidebar:hover {
+    background-color: #f9f9f9;
+  }
+  
   .product-list{
-    width: 80%;
+    width: 73%;
+    padding: 10px;
+    
   }
+  .product-list:hover {
+    background-color: #e0e0e0;
+  }
+  
+  
 
 `

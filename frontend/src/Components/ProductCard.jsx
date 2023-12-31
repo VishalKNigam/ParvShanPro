@@ -1,51 +1,102 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export const ProductCard = ({
-  id,
-  name,
-  image,
-  price,
-  brand,
-  category,
-  gender,
-}) => {
-  const isAuth = useSelector((store)=>store.authReducer.isAuth)
+const ImageWrapper = styled.div`
+  perspective: 1000px;
+`;
+
+const ImageContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: 45%;
+  margin-bottom: 8px; /* Adjust as needed */
+  transition: transform 0.5s ease;
+
+  &:hover {
+    transform: scale(1.03) ; /* Adjust the scale factor as needed */
+    
+  }
+
+  img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+`;
+
+export const ProductCard = ({ id, name, image, price, brand, category, gender }) => {
   return (
     <CardWrapper>
-      <Link to= {`/view/${id}`}>
-        <img src={image} alt={name} />
+      <Link to={`/view/${id}`}>
+        <ImageWrapper>
+          <ImageContainer>
+            <img src={image} alt={name} />
+          </ImageContainer>
+        </ImageWrapper>
       </Link>
 
-      <h1>Name:-{name}</h1>
-      <h3>Price:-{price}</h3>
+      <h3>Name:-{name}</h3>
+      <p>Price:-{price}</p>
       <p>Brand:-{brand}</p>
       <p>Category:-{category}</p>
       <p>Gender:-{gender}</p>
-      {/* {isAuth && (<button>
-        <Link to={`/edit/${id}`}>Edit</Link>
-      </button>)} */}
-       <button>
+      <button>
         <Link to={`/edit/${id}`}>Edit</Link>
       </button>
     </CardWrapper>
   );
 };
-const CardWrapper = styled.div`
-  border: 2px solid red;
-  width: 90%;
-  background: linear-gradient(lightgreen, orange, lightblue);
 
-  img {
+const CardWrapper = styled.div`
+  width: 90%;
+  
+  background-color: goldenrod;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+height: 250px;
+overflow: auto;
+  .product-details {
     width: 100%;
-    display: block;
+    text-align: center;
+    margin-top: 8px;
   }
 
-  h1,
   h3,
   p {
-    margin: 8px 0;
+    margin-top: 8px;
+    font-family: 'Roboto', sans-serif; /* Example: Use Google Fonts or another font source */
+    color: #333; /* Adjust color as needed */
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  button {
+    margin-top: 8px;
+    background-color: #4caf50; /* Example: Adjust button color */
+    color: #fff; /* Example: Adjust button text color */
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #45a049; /* Example: Adjust hover color */
+    }
   }
 `;
