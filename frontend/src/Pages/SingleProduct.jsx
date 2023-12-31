@@ -12,11 +12,11 @@ export const SingleProduct = () => {
     const product = products.find((el) => el.id === +id);
     console.log(product)
     setData(product);
-  },[]);
+  },[id,products]);
 
   return (
-    <div style={{width:"60%", height: "50%", margin: "auto" }}>
-      <div>SingleProduct: {id}</div>
+    <div style={{width:"35%", height:"auto", margin: "auto", "border": "solid red"  }}>
+      <div style={{ height: "auto", margin: "auto", "border": "solid blue"  }}>SingleProduct: {id}</div>
       <ProductCard {...data} />
     </div>
   );

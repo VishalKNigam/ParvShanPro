@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { editProduct } from './Redux/Products/action';
 
 const EditProduct = () => {
@@ -11,6 +11,7 @@ const EditProduct = () => {
   const products = useSelector(store=> store.productReducer.products);
   // console.log(products)
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   useEffect(()=>{
     const {price, name} = products.find((e)=> e.id === +id);
     setName(name);
@@ -26,6 +27,12 @@ const EditProduct = () => {
     }
     // console.log(newObj)
     dispatch(editProduct(id, newObj));
+    
+    navigate("/")
+    // setTimeout(() => {
+    //   window.location.reload();
+    // }, 0);
+
   }
   return (
     <div>

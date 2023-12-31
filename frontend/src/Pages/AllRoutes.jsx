@@ -5,6 +5,7 @@ import { HomePage } from "./HomePage";
 import { SingleProduct } from "./SingleProduct";
 import EditProduct from "./EditProduct";
 import { PrivateRoutes } from "../Components/PrivateRoutes";
+import About from "./About";
 export const AllRoutes = () => {
   return (
     <Routes>
@@ -21,9 +22,17 @@ export const AllRoutes = () => {
       <Route
         path="/view/:id"
         element={
-          <PrivateRoutes>
+          
             <SingleProduct />
-          </PrivateRoutes>
+          
+        }
+      />
+      <Route
+        path="/about"
+        element={
+          
+            <About />
+          
         }
       />
       <Route
