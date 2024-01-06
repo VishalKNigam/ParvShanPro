@@ -9,8 +9,7 @@ import About from "./About";
 export const AllRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<HomePage />} /> (Product List will be displayed
-      here)
+      <Route path="/" element={<HomePage />} index/> 
       <Route
         path="/admin"
         element={

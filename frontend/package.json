@@ -32,7 +32,7 @@
     "eject": "react-scripts eject"
     
   },
-  "homepage": "https://VishalKNigam.github.io/https://ParvShanPro",
+  "homepage": "/",
   "eslintConfig": {
     "extends": [
       "react-app",

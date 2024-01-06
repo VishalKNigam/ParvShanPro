@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { useNavigate } from 'react-router-dom';
+import Footer from '../Components/Footer';
 
 // Keyframe for the 3D effect
 const rotate3D = keyframes`
@@ -18,6 +19,7 @@ const rotate3D = keyframes`
 const AboutSection = styled.section`
   background-color: #f9f9f9;
   padding: 40px 0;
+
 `;
 
 const AboutContainer = styled.div`
@@ -29,14 +31,23 @@ const AboutContainer = styled.div`
 
 const AboutImage = styled.img`
   width: 100%;
-  max-width: 400px;
+  max-width: 550px;
   border-radius: 8px;
   animation: ${rotate3D} 16s infinite linear;
+  &:hover{
+    animation: infinite linear;
+  }
+  @media (max-width: 600px) {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 10px;
+    
+  }
 `;
 
 const AboutData = styled.div`
   padding: 0 20px;
-
+  
   h2 {
     font-size: 2em;
     margin-bottom: 20px;
@@ -48,12 +59,12 @@ const AboutData = styled.div`
   }
 
   .about__details {
-    margin-bottom: 20px;
+    
 
     .about__details-description {
       display: flex;
       align-items: center;
-      margin-bottom: 10px;
+      
 
       .about__details-icon {
         margin-right: 10px;
@@ -88,37 +99,7 @@ const AboutData = styled.div`
   }
 `;
 
-const AdditionalContent = styled.div`
-  margin-top: 40px;
 
-  h3 {
-    font-size: 1.5em;
-    color: #333;
-    margin-bottom: 10px;
-    margin: 12px;
-    padding: 12px;
-  }
-
-  p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    margin: 12px;
-    padding: 12px;
-  }
-
-  .additional__image {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-
-    &:hover {
-      transform: scale(1.05);
-    }
-  }
-`;
 
 const About = () => {
   const navigate = useNavigate();
@@ -161,12 +142,7 @@ const About = () => {
           </a>
         </AboutData>
       </AboutContainer>
-      <AdditionalContent>
-        <h3>More About Us</h3>
-        <p>
-        Parv-Shan, your go-to online destination for curated excellence, brings you a delightful shopping experience where each product tells a unique story,promising not just purchases but a journey of quality, care, and unparalleled satisfaction.        </p>
-        <img className="additional__image" src="https://img.freepik.com/free-photo/showing-cart-trolley-shopping-online-sign-graphic_53876-133967.jpg" alt="" />
-      </AdditionalContent>
+      <Footer />
     </AboutSection>
   );
 };

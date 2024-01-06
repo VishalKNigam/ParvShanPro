@@ -1,8 +1,10 @@
 import React from "react";
 import { useState } from "react";
 import styled from "styled-components";
-import { addProduct } from "./Redux/Products/action";
+import { addProduct } from "../Redux/Products/action";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router";
+
 const width = 50; // The width of the rectangle
 const goldenRatio = 1.6180339887; // The golden ratio
 const initialState = {
@@ -16,6 +18,7 @@ const initialState = {
 export const Admin = () => {
   const [data, setData] = useState(initialState);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const handleChange = (e) => {
     const { name, value } = e.target;
     //1-- explicit return
@@ -34,6 +37,8 @@ export const Admin = () => {
     console.log(data);
     dispatch(addProduct(data));
     setData(initialState);
+    navigate("/")
+    
     // let existingData = JSON.parse(localStorage.getItem("data")) || [];
     // console.log("existingData", existingData);'
     // const newData = {...data};

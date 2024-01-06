@@ -2,20 +2,9 @@ import React from "react";
 import { ProductList } from "../Components/ProductList";
 import { SideBar } from "../Components/SideBar";
 import styled from "styled-components";
+import Footer from "../Components/Footer";
 
-export const HomePage = () => {
-  
-  return (
-    <StyledHomePageContainer>
-      <div className="sidebar">
-        <SideBar />
-      </div>
-      <div className="product-list">
-        <ProductList />
-      </div>
-    </StyledHomePageContainer>
-  );
-};
+// Styled component with a more descriptive name
 const StyledHomePageContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -30,26 +19,40 @@ const StyledHomePageContainer = styled.div`
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   justify-content: space-between;
 
-  .sidebar{
+  .sidebar {
     width: 25%;
     background-color: #fff;
     padding: 10px;
     border-right: 1px solid #ccc;
 
+    &:hover {
+      background-color: #f9f9f9;
+    }
   }
-  .sidebar:hover {
-    background-color: #f9f9f9;
-  }
-  
-  .product-list{
+
+  .product-list {
     width: 73%;
     padding: 10px;
-    
-  }
-  .product-list:hover {
-    background-color: #e0e0e0;
-  }
-  
-  
 
-`
+    &:hover {
+      background-color: #e0e0e0;
+    }
+  }
+
+`;
+
+export const HomePage = () => {
+  return (
+    <>
+      <StyledHomePageContainer>
+        <div className="sidebar">
+          <SideBar />
+        </div>
+        <div className="product-list">
+          <ProductList />
+        </div>
+      </StyledHomePageContainer>
+      <Footer />
+    </>
+  );
+};

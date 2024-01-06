@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
-import { editProduct } from './Redux/Products/action';
+import { editProduct } from '../Redux/Products/action';
 
 const EditProduct = () => {
   const [data, setData] = useState({});

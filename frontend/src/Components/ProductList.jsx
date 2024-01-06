@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";
-import { getProduct } from "../Pages/Redux/Products/action";
+import { getProduct } from "../Redux/Products/action";
 import { ProductCard } from "./ProductCard";
 import styled from "styled-components";
 

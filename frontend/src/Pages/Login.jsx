@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { login } from "./Redux/Authentication/action";
+import { login } from "../Redux/Authentication/action";
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
 
